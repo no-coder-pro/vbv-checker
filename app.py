@@ -10,8 +10,10 @@ API_KEY = "VDX-SHA2X-NZ0RS-O7HAM"
 BASE_URL = "https://api.voidapi.xyz/v2/vbv"
 
 @app.route('/', methods=['GET'])
-def index():
-    return send_from_directory(os.getcwd(), 'index.html')
+@app.route('/<path:filename>', methods=['GET'])
+def home(filename='index.html'):
+    """Serve the root files (index.html, style.css, script.js, etc.)"""
+    return send_from_directory('.', filename)
 
 @app.route('/lookup', methods=['GET'])
 def lookup():
