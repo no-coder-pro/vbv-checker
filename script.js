@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://vbv-checker-azure.vercel.app';
+const API_BASE_URL = 'vbv-red.vercel.app';
 const API_PATH = '/lookup';
 
 const checkBtn = document.getElementById('check-btn');
